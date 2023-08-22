@@ -30,9 +30,7 @@ function App(props) {
       page={page}
       setPage={setPage}
       x={x}
-      setX={setX}
-      isUnicorn={isUnicorn}
-      isSeal={isSeal} />,
+      setX={setX}/>,
     <Camilio
       page={page}
       setPage={setPage}
