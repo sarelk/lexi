@@ -42,7 +42,7 @@ const Lexi = ({ formData, page, setPage, x, setX, cta, text }) => {
           <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         )}
         {imageOutput && (
-            {imageOutput}
+            <img src={imageOutput}/>
         )}
         <Image src={lexi} alt="Logo" className="lexi-bottom" />
       </div>
