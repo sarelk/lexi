@@ -110,6 +110,7 @@ function App(props) {
       />,
       <Loading
       text={"מייצרים לך את הדמות"}
+      formData={formData}
       />
   ];
   return (
