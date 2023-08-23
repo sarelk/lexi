@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import { motion } from "framer-motion";
-import camilio from "../assets/layout/camilio.svg"
-import arrow from "../assets/layout/arrow.svg"
+import logo from "../assets/logo.svg"
+import lexi from "../assets/layout/lexi.png"
 
 const Home = ({ page, setPage, x, setX, isUnicorn, isSeal }) => {
-  const subTitle = isUnicorn ? " Create your own Unicorn 🦄 " : isSeal ? "Create your own sea seal🦭" : "Create.Explore.Learn"
   return (
     <motion.div
       initial={{ x: x }}
@@ -13,11 +12,12 @@ const Home = ({ page, setPage, x, setX, isUnicorn, isSeal }) => {
       className="card no-border home"
     >
       <div>
-        <div className="home-title">Chameleon.AI</div>
-        <div className="home-sub-title">{subTitle}</div>
+        <div className="home-title">
+          <Image src={logo} alt="Lexi" />
+        </div>
+        <div className="home-sub-title">היי! אני לקסי
+מוכנים ללמוד אנגלית?</div>
       </div>
-
-      <Image src={camilio} alt="Logo" />
 
       <button
         onClick={() => {
@@ -25,8 +25,12 @@ const Home = ({ page, setPage, x, setX, isUnicorn, isSeal }) => {
           setX(1000);
         }}
       >
-        <Image src={arrow} alt="Next" />
+        בואו נתחיל!
       </button>
+      <div className='lexi-bottom'>
+      <Image src={lexi} alt="Lexi" />
+      </div>
+
     </motion.div>
   );
 };

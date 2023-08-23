@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState, useEffect } from "react";
 import Step from "../components/Step";
 import Home from "../components/Home";
-import Camilio from "../components/Camilio";
+import Lexi from "../components/Lexi";
 
 function App(props) {
   const [page, setPage] = useState(0);
@@ -31,13 +31,12 @@ function App(props) {
       setPage={setPage}
       x={x}
       setX={setX}/>,
-    <Camilio
+    <Lexi
       page={page}
       setPage={setPage}
       x={x}
       setX={setX}
-      text="Hey! I’m Camilo.
-      Colorful English tutor." />,
+      text="מה נעשה? ניצור לך דמות, וביחד תלמדו לדבר אנגלית" />,
     <Step
       formData={formData}
       setFormData={setFormData}
@@ -54,9 +53,10 @@ function App(props) {
   return (
     <div className="App">
       <Head>
-        <title>Lexi AI</title>
+        <title>Lexi</title>
       </Head>
-      <div className="body">{componentList[page]}</div>
+      <div className="body">
+        {componentList[page]}</div>
     </div>
   );
 }

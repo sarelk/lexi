@@ -1,0 +1,19 @@
+.home {
+    text-align: center;
+    background: linear-gradient(180deg, #FFF 0%, rgba(168, 131, 183, 0.55) 100%);
+}
+
+.home-sub-title {
+    color:#402C47;
+}
+
+button {
+    border-radius: 12px;
+    background: var(--green-d-1, #086663);
+    box-shadow: 1px 4px 0px 0px #02302F;
+}
+
+.lexi-bottom {
+    position: fixed;
+    bottom: 20px;
+}
