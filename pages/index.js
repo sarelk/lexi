@@ -4,6 +4,7 @@ import Step from "../components/Step";
 import Verify from "../components/Verify";
 import Home from "../components/Home";
 import Lexi from "../components/Lexi";
+import VerifyAll from "../components/VerifyAll";
 
 function App(props) {
   const [page, setPage] = useState(0);
@@ -17,7 +18,7 @@ function App(props) {
 
   const char_types = [{ "en": "Cat", "he": "חתול" }, { "en": "Dog", "he": "כלב" }, { "en": "Duck", "he": "ברווז" }, { "en": "Frog", "he": "צפרדע" }, { "en": "Fish", "he": "דג" }, { "en": "Elephant", "he": "פיל" }, { "en": "Unicorn", "he": "חד קרן" }, { "en": "Monkey", "he": "קוף" }, { "en": "Lion", "he": "אריה" }]
   const char_age = [{"en":"One","he":"אחת"},{"en":"Two","he":"שתיים"},{"en":"Three","he":"שלוש"},{"en":"Four","he":"ארבע"},{"en":"Five","he":"חמש"},{"en":"Six","he":"שש"},{"en":"Seven","he":"שבע"},{"en":"Eight","he":"שמונה"},{"en":"Nine","he":"תשע"}]
-
+  const char_clothes = [{"en":"Hat","he":"כובע"},{"en":"Dress","he":"שמלה"},{"en":"Pants","he":"מכנסיים"},{"en":"T-Shirt","he":"חולצה"},{"en":"Sun-glasses","he":"משקפי שמש"},{"en":"Coat","he":"מעיל"},{"en":"Socks","he":"גרביים"},{"en":"Watch","he":"שעון"},{"en":"Shoes","he":"נעליים"}]
   useEffect(() => {
     setFormData({ ...formData, isTranslateHidden: true });
   }, [page])
@@ -76,6 +77,36 @@ function App(props) {
       title="בת כמה הדמות?"
       progress={{ progress: "34%", title: "1 out of 8" }}
       />,
+    <Step
+    formData={formData}
+    setFormData={setFormData}
+      page={page}
+      setPage={setPage}
+      x={x}
+      setX={setX}
+      buttons={char_clothes}
+      title="מה הדמות לובשת?"
+      progress={{ progress: "38%", title: "1 out of 8" }}
+      valueToSave="charClothes"
+    />,
+      <Verify
+      valueToVerify={formData.charClothes}
+      page={page}
+      setPage={setPage}
+      x={x}
+      setX={setX}
+      title="מה הדמות לובשת?"
+      progress={{ progress: "44%", title: "1 out of 8" }}
+      />,
+      <VerifyAll
+      value={formData}
+      page={page}
+      setPage={setPage}
+      x={x}
+      setX={setX}
+      title="הדמות שלך"
+      progress={{ progress: "50%", title: "1 out of 8" }}
+      />
   ];
   return (
     <div className="App">
