@@ -7,6 +7,10 @@ const Step = ({ valueToVerify, page, setPage, x, setX, title, progress }) => {
     setPage(page - 1);
     setX(1000);
 }
+  const nextPage = () => {
+    setPage(page + 1);
+    setX(1000);
+}
 
 
   return (
@@ -23,7 +27,7 @@ const Step = ({ valueToVerify, page, setPage, x, setX, title, progress }) => {
 
       {title}
       <div className="verify-container">
-        <Image src={`/buttons/${valueToVerify.en}.svg`} height={105} width={105} />
+        <Image src={`/buttons/${valueToVerify.en}.svg`} height={105} width={105} alt={valueToVerify.en}/>
         <div className="flex justify-c f-column">
           <div className="verify-title">
             {valueToVerify.en}
@@ -33,7 +37,7 @@ const Step = ({ valueToVerify, page, setPage, x, setX, title, progress }) => {
           </div>
         </div>
       </div>
-      <button className="continue">אני רוצה להמשיך</button><br/>
+      <button  onClick={(e)=>nextPage()} className="continue">אני רוצה להמשיך</button><br/>
       <button onClick={(e)=>pageBack()} className="change">אני רוצה לשנות</button>
     </motion.div>
   );

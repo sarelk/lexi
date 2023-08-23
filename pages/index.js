@@ -16,6 +16,8 @@ function App(props) {
   });
 
   const char_types = [{ "en": "Cat", "he": "חתול" }, { "en": "Dog", "he": "כלב" }, { "en": "Duck", "he": "ברווז" }, { "en": "Frog", "he": "צפרדע" }, { "en": "Fish", "he": "דג" }, { "en": "Elephant", "he": "פיל" }, { "en": "Unicorn", "he": "חד קרן" }, { "en": "Monkey", "he": "קוף" }, { "en": "Lion", "he": "אריה" }]
+  const char_age = [{"en":"One","he":"אחת"},{"en":"Two","he":"שתיים"},{"en":"Three","he":"שלוש"},{"en":"Four","he":"ארבע"},{"en":"Five","he":"חמש"},{"en":"Six","he":"שש"},{"en":"Seven","he":"שבע"},{"en":"Eight","he":"שמונה"},{"en":"Nine","he":"תשע"}]
+
   useEffect(() => {
     setFormData({ ...formData, isTranslateHidden: true });
   }, [page])
@@ -45,14 +47,35 @@ function App(props) {
       valueToSave="charType"
     />,
     <Verify
-      valueToVerify={formData.charType}
+    valueToVerify={formData.charType}
+    page={page}
+    setPage={setPage}
+    x={x}
+    setX={setX}
+    title="הדמות שלי היא?"
+    progress={{ progress: "22%", title: "1 out of 8" }}
+    />,
+    <Step
+    formData={formData}
+    setFormData={setFormData}
       page={page}
       setPage={setPage}
       x={x}
       setX={setX}
-      title="הדמות שלי היא?"
-      progress={{ progress: "22%", title: "1 out of 8" }}
-    />
+      buttons={char_age}
+      title="בת כמה הדמות?"
+      progress={{ progress: "28%", title: "1 out of 8" }}
+      valueToSave="charAge"
+    />,
+      <Verify
+      valueToVerify={formData.charAge}
+      page={page}
+      setPage={setPage}
+      x={x}
+      setX={setX}
+      title="בת כמה הדמות?"
+      progress={{ progress: "34%", title: "1 out of 8" }}
+      />,
   ];
   return (
     <div className="App">
