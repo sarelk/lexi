@@ -4,6 +4,7 @@ import Step from "../components/Step";
 import Verify from "../components/Verify";
 import Home from "../components/Home";
 import Lexi from "../components/Lexi";
+import Loading from "../components/Loading";
 import VerifyAll from "../components/VerifyAll";
 
 function App(props) {
@@ -106,6 +107,9 @@ function App(props) {
       setX={setX}
       title="הדמות שלך"
       progress={{ progress: "50%", title: "1 out of 8" }}
+      />,
+      <Loading
+      text={"מייצרים לך את הדמות"}
       />
   ];
   return (
