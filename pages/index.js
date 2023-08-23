@@ -27,16 +27,19 @@ function App(props) {
   const componentList = [
     <Home
       page={page}
+      key={0}
       setPage={setPage}
       x={x}
       setX={setX} />,
-    <Lexi
+      <Lexi
       page={page}
+      key={1}
       setPage={setPage}
       x={x}
       setX={setX}
       text="מה נעשה? ניצור לך דמות, וביחד תלמדו לדבר אנגלית" />,
-    <Step
+      <Step
+      key={2}
       formData={formData}
       setFormData={setFormData}
       page={page}
@@ -47,29 +50,32 @@ function App(props) {
       title="הדמות שלי היא?"
       progress={{ progress: "14%", title: "1 out of 8" }}
       valueToSave="charType"
-    />,
-    <Verify
-    valueToVerify={formData.charType}
-    page={page}
-    setPage={setPage}
-    x={x}
+      />,
+      <Verify
+      key={3}
+      valueToVerify={formData.charType}
+      page={page}
+      setPage={setPage}
+      x={x}
     setX={setX}
     title="הדמות שלי היא?"
     progress={{ progress: "22%", title: "1 out of 8" }}
     />,
     <Step
+    key={4}
     formData={formData}
     setFormData={setFormData}
-      page={page}
-      setPage={setPage}
+    page={page}
+    setPage={setPage}
       x={x}
       setX={setX}
       buttons={char_age}
       title="בת כמה הדמות?"
       progress={{ progress: "28%", title: "1 out of 8" }}
       valueToSave="charAge"
-    />,
+      />,
       <Verify
+      key={5}
       valueToVerify={formData.charAge}
       page={page}
       setPage={setPage}
@@ -78,9 +84,10 @@ function App(props) {
       title="בת כמה הדמות?"
       progress={{ progress: "34%", title: "1 out of 8" }}
       />,
-    <Step
-    formData={formData}
-    setFormData={setFormData}
+      <Step
+      key={6}
+      formData={formData}
+      setFormData={setFormData}
       page={page}
       setPage={setPage}
       x={x}
@@ -91,6 +98,7 @@ function App(props) {
       valueToSave="charClothes"
     />,
       <Verify
+      key={7}
       valueToVerify={formData.charClothes}
       page={page}
       setPage={setPage}
@@ -100,6 +108,7 @@ function App(props) {
       progress={{ progress: "44%", title: "1 out of 8" }}
       />,
       <VerifyAll
+      key={8}
       value={formData}
       page={page}
       setPage={setPage}
@@ -109,6 +118,7 @@ function App(props) {
       progress={{ progress: "50%", title: "1 out of 8" }}
       />,
       <Loading
+      key={9}
       text={"מייצרים לך את הדמות"}
       formData={formData}
       />
