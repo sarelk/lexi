@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import Progress from "./Progress";
+import Image from 'next/image';
 
-const Step = ({ formData, setFormData, page, setPage, x, setX, buttons, title, progress, valueToSave }) => {
+const Step = ({ formData, setFormData, page, setPage, x, setX, buttons, title, progress, valueToSave, verify }) => {
 
-  const setChar = (e) => {
-    setFormData({ ...formData, [valueToSave]: e.target.value });
+  const setChar = (button) => {
+    setFormData({ ...formData, [valueToSave]: button });
     setPage(page + 1);
     setX(1000);
-    e.target.blur()
   }
 
   return (
@@ -22,10 +22,12 @@ const Step = ({ formData, setFormData, page, setPage, x, setX, buttons, title, p
         x={x}
         setX={setX} />
 
+        {title}
       <div className="button-container">
         {buttons.map((button) => {
           return (
-            <button value={button} cb={setChar} key={button} />
+            <button value={button.he} onClick={(e)=>setChar(button)} key={button.he} className="Animalbtn">{button.en}
+            <Image src={`/buttons/${button.en}.svg`} height={42} width={42} alt={button.en}/></button>
           )
         })}
       </div>

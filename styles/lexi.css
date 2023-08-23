@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {font-family: Rubik;}
 .home {
     text-align: center;
     background: linear-gradient(180deg, #FFF 0%, rgba(168, 131, 183, 0.55) 100%);
@@ -17,3 +20,40 @@ button {
     position: fixed;
     bottom: 20px;
 }
+
+.progress-bar {
+    height: 10px;
+    margin-bottom: 16px;
+    background-color: #F0DBF8;
+}
+.progress-bar div {
+    height: 10px;
+    background-color: #A883B7;
+}
+
+.card {text-align: center;}
+
+.Animalbtn {border-radius: 16px;
+    border: 2px solid #D4D4D4;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0px 2px 0px 0px #D4D4D4;
+    color: black;}
+
+.verify-container {
+    padding:20px;
+    color:#086663;
+    margin-top:20px;
+    margin-bottom: 20px;
+    border-radius: 42px;
+border: 5.124px solid #10A19D;
+background: rgba(16, 161, 157, 0.07);
+box-shadow: 0px 5.123809337615967px 0px 0px #D4D4D4;
+}
+
+.verify-title {font-weight: 500; font-size:30px;}
+.continue {border-radius: 12px;
+    background: #10A19D;
+    box-shadow: 1px 4px 0px 0px #086663;}
+.change {border-radius: 12px;
+    border: 1px solid #086663;
+    box-shadow: 1px 4px 0px 0px #086663;background-color: white;color:#086663}
