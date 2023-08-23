@@ -15,7 +15,7 @@ const Home = ({ page, setPage, x, setX, isUnicorn, isSeal }) => {
         <div className="home-title">
           <Image src={logo} alt="Lexi" />
         </div>
-        <div className="home-sub-title">היי! אני לקסי
+        <div className="home-sub-title">היי! אני לקסי,
 מוכנים ללמוד אנגלית?</div>
       </div>
 
