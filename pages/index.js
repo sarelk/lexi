@@ -19,7 +19,7 @@ function App(props) {
 
   const char_types = [{ "en": "Cat", "he": "חתול" }, { "en": "Dog", "he": "כלב" }, { "en": "Duck", "he": "ברווז" }, { "en": "Frog", "he": "צפרדע" }, { "en": "Fish", "he": "דג" }, { "en": "Elephant", "he": "פיל" }, { "en": "Unicorn", "he": "חד קרן" }, { "en": "Monkey", "he": "קוף" }, { "en": "Lion", "he": "אריה" }]
   const char_age = [{"en":"One","he":"אחת"},{"en":"Two","he":"שתיים"},{"en":"Three","he":"שלוש"},{"en":"Four","he":"ארבע"},{"en":"Five","he":"חמש"},{"en":"Six","he":"שש"},{"en":"Seven","he":"שבע"},{"en":"Eight","he":"שמונה"},{"en":"Nine","he":"תשע"}]
-  const char_clothes = [{"en":"Hat","he":"כובע"},{"en":"Dress","he":"שמלה"},{"en":"Pants","he":"מכנסיים"},{"en":"T-Shirt","he":"חולצה"},{"en":"Sun-glasses","he":"משקפי שמש"},{"en":"Coat","he":"מעיל"},{"en":"Socks","he":"גרביים"},{"en":"Watch","he":"שעון"},{"en":"Shoes","he":"נעליים"}]
+  const char_clothes = [{"en":"Hat","he":"כובע"},{"en":"Dress","he":"שמלה"},{"en":"Pants","he":"מכנסיים"},{"en":"T-shirt","he":"חולצה"},{"en":"Sun-glasses","he":"משקפי שמש"},{"en":"Coat","he":"מעיל"},{"en":"Socks","he":"גרביים"},{"en":"Watch","he":"שעון"},{"en":"Shoes","he":"נעליים"}]
   useEffect(() => {
     setFormData({ ...formData, isTranslateHidden: true });
   }, [page])
