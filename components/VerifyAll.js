@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Progress from "./Progress";
 import Image from 'next/image';
+import Audio from './Audio'
 
 const Step = ({ value, page, setPage, x, setX, title, progress }) => {
   const pageBack = () => {
@@ -26,33 +27,36 @@ const Step = ({ value, page, setPage, x, setX, title, progress }) => {
         setX={setX} />
 
       {title}
-      <div className="verify-container flex">
+      <div className="verify-container flex gap20">
         <Image src={`/buttons/${value.charType.en}.svg`} height={61} width={61} alt={value.charType.en}/>
         <div className="flex justify-c f-column">
           <div className="verify-title">
             {value.charType.en}
+            <Audio msg={value.charType.en} lang={"en-US"} voice={"Google US English"}/>
           </div><br />
           <div>
             {value.charType.he}
           </div>
         </div>
       </div>
-      <div className="verify-container flex">
+      <div className="verify-container flex gap20">
         <Image src={`/buttons/${value.charAge.en}.svg`} height={61} width={61} alt={value.charAge.en}/>
         <div className="flex justify-c f-column">
           <div className="verify-title">
             {value.charAge.en}
+            <Audio msg={value.charAge.en} lang={"en-US"} voice={"Google US English"}/>
           </div><br />
           <div>
             {value.charAge.he}
           </div>
         </div>
       </div>
-      <div className="verify-container flex">
+      <div className="verify-container flex gap20">
         <Image src={`/buttons/${value.charClothes.en}.svg`} height={61} width={61} alt={value.charClothes.en}/>
         <div className="flex justify-c f-column">
           <div className="verify-title">
             {value.charClothes.en}
+            <Audio msg={value.charClothes.en} lang={"en-US"} voice={"Google US English"}/>
           </div><br />
           <div>
             {value.charClothes.he}
