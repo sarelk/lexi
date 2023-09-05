@@ -126,7 +126,7 @@ function App(props) {
   return (
     <div className="App">
       <Head>
-        <title>Lexi</title>
+        <title>Hello Lexi</title>
       </Head>
       <div className="body">
         {componentList[page]}</div>
