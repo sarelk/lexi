@@ -50,11 +50,11 @@ const Step = ({ valueToVerify, page, setPage, x, setX, title, progress }) => {
     toSpeak(valueToVerify.he,"he-IL","Carmit")
     setTimeout(()=>{
       toSpeak(valueToVerify.en,"en-US","Google US English")
-    },1400)
+    },1500)
     setTimeout(()=>{
       setPage(page + 1);
       setX(1500);
-    },2900)
+    },3000)
 }
 
 
